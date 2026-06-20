@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickQR - QR Code Generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-btn">
+        🌙 Dark Mode
+    </button>
+
+    <div class="container">
+
+        <!-- Left Section -->
+        <div class="left">
+
+            <span class="badge">Free QR Generator</span>
+
+            <h1>Create QR Codes Instantly</h1>
+
+            <p class="subtitle">
+                Generate clean QR codes for URLs, text, emails, phone numbers and more.
+            </p>
+
+            <div class="input-card">
+
+                <textarea
+                    id="qrText"
+                    maxlength="500"
+                    placeholder="Paste a URL or enter any text..."></textarea>
+
+                <div class="info-row">
+                    <span id="counter">0 / 500</span>
+                    <span id="type">Text</span>
+                </div>
+
+                <!-- QR Size -->
+                <select id="qrSize">
+                    <option value="200">Small</option>
+                    <option value="250" selected>Medium</option>
+                    <option value="300">Large</option>
+                </select>
+
+                <div class="btn-row">
+
+                    <button id="generateBtn">
+                        Generate QR
+                    </button>
+
+                    <button id="copyBtn">
+                        Copy Text
+                    </button>
+
+                    <button id="clearBtn">
+                        Clear
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- History -->
+
+            <div class="history-card">
+
+                <h3>Recent History</h3>
+
+                <ul id="history"></ul>
+
+            </div>
+
+        </div>
+
+        <!-- Right Section -->
+
+        <div class="right">
+
+            <div class="qr-card">
+
+                <div id="qrCodeContainer">
+
+                    <div id="qrCode"></div>
+
+                </div>
+
+                <p class="qr-label">
+                    Your QR code appears here
+                </p>
+
+                <div class="download-buttons">
+
+                    <button id="downloadBtn">
+                        Download PNG
+                    </button>
+
+                    <button id="svgBtn">
+                        Download SVG
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="developer-info">
+
+            <h3>Developed By</h3>
+
+            <p>Arshiya Gugliani</p>
+
+            <p>Email: arshiyagugliani14@gmail.com</p>
+
+        </div>
+
+        <a
+            href="https://digitalheroesco.com"
+            target="_blank"
+            class="digital-heroes-btn">
+
+            Built for Digital Heroes
+
+        </a>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
